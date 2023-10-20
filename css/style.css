@@ -1,0 +1,1139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Roboto+Slab:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap');
+@import url("../fonts/bauhaus-93/BAUHS93.ttf");
+
+
+[class*="__container"]{
+	max-width: 1260px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+/*---------------------------------------------*/
+body {
+	font-family: "roboto";
+	font-size: 18px;
+	font-weight: 400;
+	color: #fff;
+}
+
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main{
+	flex-grow: 1;
+}
+/*--------------------HEADER-WRAPPER--------------------*/
+.header-wrapper {
+	background: url(../img/bg/wooden_bg.jpg) center top;
+	width: 100%;
+	height: 100vh;
+}
+.header-wrapper__header {}
+.header-wrapper__head-block {}
+/*----------------------- HEADER -----------------------*/
+
+.header {
+	height: 80px;
+	width: 100%;
+	background:rgba(0, 0, 0, 0.80);
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 20px 0;
+	z-index: 50;
+
+	transition: all 0.5;
+}
+.header.shrink-header {
+	height: 60px;
+}
+
+.header__container {
+	display: flex;
+  	align-items: center;
+	gap: 40px;
+	height: 100%;
+}
+
+.header__logo {
+	font-family: "bauhaus 93";
+	color: #fff;
+	font-size: 40px;
+	font-weight: 400;
+	letter-spacing: 0.35em; /* 14px / 40px */
+	z-index: 50;
+}
+.menu-burger {
+
+}
+.header__menu {
+	margin-left: auto;
+}
+.menu {
+
+}
+.menu__list {
+	display: flex;
+	gap: 65px;
+}
+.menu__item {
+
+}
+.menu__link {
+	font-family: "Roboto Slab";
+	color: #fff;
+	font-weight: 400;
+	font-size: 22px;
+	position: relative;
+}
+.menu__link span {
+	display: block;
+   position: absolute;
+   right: 0;
+   bottom: -3px;
+   width: 0;
+   height: 2px;
+   background-color: red;
+   transition: width 0.5s;
+}
+.menu__link:hover span {
+	width: 100%;
+   left: 0;
+}
+/*---------------------------HEAD-BLOCK---------------------------*/
+.head-block {
+	margin-top: 130px;
+}
+.head-block__container {
+
+}
+.head-block__titles-block {
+	text-align: center;
+	color: #fff;
+}
+
+/*-------animation--------*/
+.head-block__title {
+	font-size: 44px;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+
+	animation: title 0.5s ease-in-out forwards;
+	transform: translate(0px, 120%);
+	opacity: 0;
+}
+@keyframes title {
+	0% {
+		opacity: 0;
+		transform: translate(0px, 120%);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0px, 0%);
+	}
+}
+/*------------------------*/
+.head-block__sub-title {
+	font-size: 24px;
+	font-family: "Roboto mono";
+	font-weight: 300;
+	margin-top: 35px;
+	line-height: 1.5em;
+	letter-spacing: 0.1em;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+	animation: sub-title 0.5s ease-in-out 0.2s forwards;
+	transform: translate(0px, 80%);
+	opacity: 0;
+}
+/*-------animation--------*/
+@keyframes sub-title {
+	0% {
+		opacity: 0;
+		transform: translate(0px, 80%);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0px, 0%);
+	}
+}
+/*------------------------*/
+.head-block__pictures-block {
+	display: flex;
+	justify-content: space-between;
+	max-width: 800px;
+	margin: 50px auto 0 auto;
+	padding-bottom: 50px;
+}
+
+.head-block__img img {
+	max-width: 100%;
+}
+.head-block__1-img {
+	animation: img-1 0.5s ease-in-out 0.5s forwards;
+	transform: translate(0px, 20%);
+	opacity: 0;
+}
+/*-------animation--------*/
+@keyframes img-1 {
+	0% {
+		opacity: 0;
+		transform: translate(0px, 20%);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0px, 0%);
+	}
+}
+/*------------------------*/
+.head-block__1-img img {
+	max-width: 90%;
+}
+.head-block__2-img {
+	margin-left: 150px;
+
+	animation: img-2 0.5s ease-in-out 0.5s forwards;
+	transform: translate(0px, 20%);
+	opacity: 0;
+}
+/*-------animation--------*/
+@keyframes img-2 {
+	0% {
+		opacity: 0;
+		transform: translate(0px, 20%);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0px, 0%);
+	}
+}
+/*------------------------*/
+
+/*-------------------------------- ABACUS -----------------------------*/
+
+/*========== border-lines =========*/
+.border-tb {
+}
+.border-tb::before,
+.border-tb::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 12px;
+	background: #A38723;
+	filter: blur(5px);
+}
+.border-tb::before {
+	top: -6px;
+}
+.border-tb::after {
+	bottom: -6px;
+}
+.border-lr {
+}
+.border-lr::before,
+.border-lr::after {
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 100%;
+	background: #A38723;
+	filter: blur(5px);
+}
+.border-lr::before {
+	left: -6px;
+}
+.border-lr::after {
+	right: -6px;
+}
+/*=================================*/
+
+.mechanical-era {
+	background: url(../img/bg/stones-wall-dark.jpg) top center fixed;
+	width: 100%;
+	padding-bottom: 100px;
+}
+.mechanical-era__container {
+}
+.page_title-block {
+	margin-top: 120px;
+	text-align: center;
+}
+.page_title {
+	font-size: 42px;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+
+	opacity: 0;
+	transform: translate(0, 120%);
+	transition: all 1s ease 0.1s;
+}
+.page_sub-title {
+	font-family: 'roboto mono';
+	font-size: 30px;
+	margin-top: 30px;
+
+	opacity: 0;
+	transform: translate(0, 100%);
+	transition: all 1s ease 0.5s;
+}
+.mechanical-era__title-block {
+}
+.mechanical-era__title {
+}
+/*___________ animation ___________*/
+.page_title._active {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+/*________________________________*/
+.mechanical-era__sub-title {
+}
+/*___________ animation ___________*/
+.page_sub-title._active {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+/*________________________________*/
+/* ------- abacus ------- */
+.mechanical-era__abacus {
+	margin-top: 200px;
+	position: relative;
+}
+.abacus {
+}
+.abacus__time-line {
+}
+.mechanichal-era__time-line {
+	position: absolute;
+	width: 12px;
+	/*height: 1500px;*/
+	background: #A38723;
+	filter: blur(5px);
+	top: 0;
+	left: 49.5%;
+	height: 2900px;
+	/*height: 0;
+	transition: all 5s ease 1s;*/
+}
+/*___________ animation ___________*/
+/*.mechanichal-era__time-line._active {
+	height: 2900px;
+}*/
+/*________________________________*/
+.abacus__year {
+	font-size: 20px;
+	letter-spacing: 0.1em;
+	position: absolute;
+	top: 30%;
+	right: -105px;
+	background:rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 25px rgba(0,0,0,1);
+	padding: 0 2px;
+} 
+/*___________ animation ___________*/
+.abacus__box {
+	width: 500px;
+	background: rgba(0, 0, 0, 0.20);
+	position: relative;
+	opacity: 0;
+	transform: translate(-100%, 0);
+	transition: all 1s ease 0.5s;
+}
+.abacus__box._active {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+/*________________________________*/
+.abacus__img img {
+	width: 100%;
+	height: 100%;
+}
+.abacus__img {
+	width: 85%;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.abacus__text-block {
+	text-align: center;
+	margin-top: 15px;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	padding: 0 30px;
+}
+.abacus__title {
+	font-size: 22px;
+	font-weight: 500;
+	letter-spacing: 0.015em;
+}
+.abacus__text {
+	margin-top: 15px;
+	font-size: 18px;
+	letter-spacing: 0.02em;
+	line-height: 1.25em;
+	padding-bottom: 20px;
+}
+
+/* ------- antikythera-mechanism ------- */
+.mechanical-era__antikythera-mechanism {
+	margin-top: 200px;
+	position: relative;
+}
+.antikythera-mechanism {
+}
+.antikythera-mechanism__box {
+	width: 500px;
+	position: relative;
+	margin-left: auto;
+	background: rgba(0, 0, 0, 0.20);
+}
+.antikythera-mechanism__year {
+	font-size: 20px;
+	letter-spacing: 0.1em;
+	position: absolute;
+	top: 30%;
+	left: -102px;
+	background:rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 25px rgba(0,0,0,1);
+	padding: 0 2px;
+}
+
+.antikythera-mechanism__img img {
+	width: 100%;
+	height: 100%;
+}
+.antikythera-mechanism__img {
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.antikythera-mechanism__text-block {
+	text-align: center;
+	margin-top: 15px;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	padding: 0 30px;
+}
+.antikythera-mechanism__title {
+	font-size: 22px;
+	font-weight: 500;
+	letter-spacing: 0.015em;
+}
+.antikythera-mechanism__text {
+	margin-top: 15px;
+	font-size: 18px;
+	letter-spacing: 0.02em;
+	line-height: 1.25em;
+}
+/*-------------------------------PASCAL-CALCUATOR--------------------------------*/
+.mechanical-era__pascal-calculator {
+}
+.pascal-calculator {
+}
+.pascal-calculator__box {
+	background: rgba(0, 0, 0, 0.20);
+}
+.animated-object {
+}
+.pascal-calculator__year {
+	right: -85px;
+}
+.pascal-calculator__img {
+}
+.pascal-calculator__text-block {
+}
+.pascal-calculator__title {
+}
+.pascal-calculator__text {
+	padding-bottom: 20px;
+}
+/*-------------------------------------------------------------------------------*/
+/*------------------------------- Z1 --------------------------------*/
+.mechanical-era__z1 {
+}
+.z1 {
+}
+.z1__box {
+	margin-left: auto;
+	background: rgba(0, 0, 0, 0.20);
+}
+.z1__year {
+	top: 30%;
+	left: -90px;
+}
+.z1__img {
+}
+.z1__title {
+}
+.z1__text {
+}
+/*-------------------------------------------------------------------------------*/
+/*---------------------------------------------------- DIGITAL ERA ------------------------------------------------------*/
+.digital-era {
+	background: url(../img/bg/vintage-repeating-small.png) top center repeat;
+	width: 100%;
+	padding-bottom: 100px;
+}
+.digital-era__container {
+}
+.digital-era__time-line {
+	position: absolute;
+	width: 12px;
+	background: #A38723;
+	filter: blur(5px);
+	top: 0;
+	left: 49.5%;
+	height: 6500px;
+}
+.digital-era__title-block {
+}
+.digital-era__title {
+}
+.digital-era__sub-title {
+}
+/*--------------harvard-mark---------------*/
+.digital-era__harvard-mark {
+	margin-top: 150px;
+	position: relative;
+}
+.harvard-mark {
+}
+.harvard-mark__box {
+	background: rgba(0, 0, 0, 0.40);
+}
+.harvard-mark__year {
+	right: -85px;
+}
+.harvard-mark__img {
+}
+.harvard-mark__text-block {
+}
+.harvard-mark__title {
+}
+.harvard-mark__text {
+}
+/*-------------------eniac---------------------*/
+.digital-era__eniac {
+}
+.eniac {
+}
+.eniac__box {
+	background: rgba(0, 0, 0, 0.40);
+	margin-left: auto;
+}
+.eniac__year {
+	left: -85px;
+}
+.eniac__img {
+}
+.eniac__text-block {
+}
+.eniac__title {
+}
+.eniac__text {
+}
+/*---------------------xerox-alto---------------------*/
+.digital-era__xerox-alto {
+}
+.xerox-alto {
+}
+.xerox-alto__box {
+	background: rgba(0, 0, 0, 0.40);
+}
+.xerox-alto__year {
+	right: -85px;
+}
+.xerox-alto__img {
+}
+.xerox-alto__text-block {
+}
+.xerox-alto__title {
+}
+.xerox-alto__text {
+}
+/*--------------------apple-computer-1---------------------*/
+.digital-era__apple-computer-1 {
+}
+.apple-computer-1 {
+}
+.apple-computer-1__box {
+	background: rgba(0, 0, 0, 0.40);
+	margin-left: auto;
+}
+.apple-computer-1__year {
+	left: -85px;
+}
+.apple-computer-1__img {
+}
+.apple-computer-1__text-block {
+}
+.apple-computer-1__title {
+}
+.apple-computer-1__text {
+}
+/*---------------------apple-computer-2----------------------*/
+.digital-era__apple-computer-2 {
+}
+.apple-computer-2 {
+}
+.apple-computer-2__box {
+	background: rgba(0, 0, 0, 0.40);
+}
+.apple-computer-2__year {
+	right: -85px;
+}
+.apple-computer-2__img {
+}
+.apple-computer-2__text-block {
+}
+.apple-computer-2__title {
+}
+.apple-computer-2__text {
+}
+/*----------------------macintoshs-------------------------*/
+.digital-era__macintosh {
+}
+.macintosh {
+}
+.macintosh__box {
+	background: rgba(0, 0, 0, 0.40);
+	margin-left: auto;
+}
+.macintosh__year {
+	left: -85px;
+}
+.macintosh__img {
+}
+.macintosh__text-block {
+}
+.macintosh__title {
+}
+.macintosh__text {
+}
+/*------------------footer------------------*/
+.footer {
+	width: 100%;
+	background: url(../img/bg/coding-bg.jpg) top center;
+	height: 200px;
+}
+.to-be-continued {
+	text-align: center;
+	margin-top: 85px;
+	font-size: 30px;
+}
+/*------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------*/
+.mechanical-era_item {
+	margin-top: 200px;
+}
+.digital-era_item {
+	margin-top: 200px;
+}
+.box-container {
+	width: 500px;
+	position: relative;
+
+	opacity: 0;
+	transform: translate(-100%, 0);
+	transition: all 0.7s ease 0.3s;
+}
+.box-right {
+	transform: translate(100%, 0);
+}
+.box-container._active {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+.years {
+	font-size: 20px;
+	letter-spacing: 0.1em;
+	position: absolute;
+	top: 30%;
+	background:rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 25px rgba(0,0,0,1);
+	padding: 0 2px;
+}
+/*.years.years-l {
+	right: -105px;
+}
+.years.years-r {
+	left: -102px;
+}*/
+.img-container {
+	margin: 0 auto;
+	padding-top: 20px;
+	width: 85%;
+}
+.img-container img{
+	width: 100%;
+	height: 100%;
+}
+.text-container {
+	text-align: center;
+	margin-top: 15px;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	padding: 0 30px;
+}
+.title-size {
+	font-size: 22px;
+	font-weight: 500;
+	letter-spacing: 0.015em;
+}
+.text-size {
+	margin-top: 15px;
+	font-size: 18px;
+	letter-spacing: 0.02em;
+	line-height: 1.25em;
+	padding-bottom: 20px;
+}
+.text-size:not(:last-child) {
+	padding-bottom: 0;
+}
+
+
+.antikythera-mechanism__img,
+.xerox-alto__img,
+.apple-computer-2__img {
+	width: 80%;
+}
+/*---------------------------------------------------------------------------------*/
+
+
+/*=============================-SCREENS-============================*/
+
+/* 	info
+	desctop - 1920, 1600, 1280, 1024, 768 px
+	phones - 480, 320 px
+	main container - 1260px
+*/
+
+
+@media screen and (max-width: 1400px){
+	[class*="__container"]{
+		max-width: 1260px;
+		margin: 0 auto;
+		padding-left: calc(15px + 50px);
+		padding-right: calc(15px + 50px);
+	}
+	.box-container {
+		width: 450px;
+	}
+}
+@media screen and (max-width: 1150px){
+	.box-container {
+		width: 400px;
+	}
+}
+@media screen and (max-width: 1024px){
+	[class*="__container"]{
+		max-width: 950px;
+		margin: 0 auto;
+	}
+
+	.menu__list {
+		display: flex;
+		gap: 40px;
+	}
+
+	/*-----------HEAD-BLOCK----------*/
+	
+	.head-block__title {
+		font-size: 40px;
+	}
+	.head-block__sub-title {
+		font-size: 22px;
+	}
+	/*-------------------------------*/
+	/* --------- mechanical-era ---------*/
+	.page_title-block {
+		margin-top: 100px;
+	}
+	.page_title {
+		font-size: 38px;
+	}
+	.page_sub-title {
+		font-size: 28px;
+	}
+
+
+	.box-container {
+		width: 350px;
+	}
+	.text-container {
+		padding: 0 20px;
+	}
+	.title-size {
+		font-size: 21px;
+	}
+	.text-size {
+		font-size: 17px;
+		font-weight: 300;
+	}
+
+	/*-----------------------------------*/
+}
+@media screen and (max-width: 930px) {
+	/* --------- mechanical-era ---------*/
+	.mechanical-era_item,
+	.digital-era_item {
+		margin-top: 150px;
+	}
+	.mechanichal-era__time-line,
+	.digital-era__time-line {
+		left: 90%;
+	}
+	.mechanichal-era__time-line {
+		height: 2600px;
+	}
+	.years-r {
+		left: 103%;
+		width: 88px
+	}
+	.z1__year {
+		width: 57px;
+	}
+	.box-container {
+		width: 400px;
+		left: 5%;
+	}
+	.antikythera-mechanism__box.box-right {
+		margin-left: 0;
+	}
+	.box-right {
+		margin-left: 0;
+	}
+	/*-----------------------------------*/
+}
+@media screen and (min-width: 768px){
+	.header {
+		height: 80px;
+		width: 100%;
+		background:rgba(0, 0, 0, 0.80);
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding: 20px 0;
+		z-index: 50;
+	
+		transform: translate(0, -100%);
+		transition: all 1s ease 0s;
+		opacity: 0;
+	}
+	.header._active {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+	/*---------------------------------*/
+	.small-screen_year {
+		display: none;
+	}
+}
+@media screen and (max-width: 768px){
+	[class*="__container"]{
+		max-width: calc(728px); /* 50+50 from padding*/
+		margin: 0 auto;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	
+	.header {
+		height: 60px;
+		padding: 10px 0;
+	}
+	.header__logo {
+		font-size: 32px;
+		position: absolute;
+		left: 30px;
+	}
+	.header__menu {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0);
+		padding-top: 75px;
+		padding-right: 30px;
+		text-align: right;
+		transition: all 0.3s ease 0s;
+		z-index: 2;
+		flex-direction: column;
+	}
+	
+	.menu__list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+	.menu__link {
+		text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+	}
+
+	.menu-burger{
+		display: block;
+		width: 30px;
+		height: 19px;
+		z-index: 3;
+		position: absolute;
+		right: 30px;
+	}
+	.menu-burger span{
+		position: absolute;
+		background-color: #fff;
+		left: 0;
+		width: 100%;
+		height: 3px;
+		top: 8px;
+		transition: all 0.3s ease 0s;
+		border-radius: 50px;
+	}
+	.menu-burger:before,
+	.menu-burger:after{
+		content: '';
+		background-color: #fff;
+		position: absolute;
+		width: 100%;
+		height: 3px;
+		left: 0;
+		transition: all 0.3s ease 0s;
+		border-radius: 50px;
+	}
+	.menu-burger:before{
+		top: 0;
+	}
+	.menu-burger:after{
+		bottom: 0;
+	}
+
+	/* ------ active ------- */
+	body._lock {
+		overflow: hidden;
+	}
+	.header__menu._active {
+		right: 0%;
+		background: rgba(0, 0, 0, 0.8);
+	}
+	.menu-burger._active span{
+		transform: scale(0);
+	}
+	.menu-burger._active:before{
+		transform:rotate(45deg);
+		top: 8px;
+	}
+	.menu-burger._active:after{
+		transform:rotate(-45deg);
+		bottom: 8px;
+	}
+	/*-----------------------*/
+
+	/*-----------HEAD-BLOCK----------*/
+	.head-block {
+		margin-top: 130px;
+	}
+	.head-block__title {
+		font-size: 34px;
+	}
+	.head-block__sub-title {
+		font-size: 18px;
+		margin-top: 30px;
+	}
+	.head-block__pictures-block {
+		max-width: 500px;
+	}
+	.head-block__2-img {
+		margin-left:40px;
+	}
+	/*-------------------------------*/
+	/*---------- mechanical-era----------*/
+	.page_title-block {
+		margin-top: 80px;
+	}
+	.page_title {
+		font-size: 34px;
+	}
+	.page_sub-title {
+		font-size: 22px;
+	}
+	.mechanichal-era__time-line,
+	.digital-era__time-line {
+		display: none;
+	}
+	.years {
+		display: none;
+	}
+	.small-screen_year span {
+		background:rgba(0, 0, 0, 0.5);
+		box-shadow: 0 0 25px rgba(0,0,0,1);
+		padding: 0 3px;
+	}
+	.small-screen_year {
+		display: block;
+		position: absolute;
+		top: -7px;
+		width: 100%;
+		z-index: 2;
+		text-align: center;
+	}
+	.box-container {
+		width: 100%;
+		left: 0;
+		margin: 0 auto;
+	}
+	.mechanical-era__abacus {
+		margin-top: 80px;
+	}
+	.text-container {
+		padding: 0 40px;
+	}
+	.title-size {
+		font-size: 21px;
+	}
+	.text-size {
+		font-size: 17px;
+		font-weight: 300;
+	}
+	/*-----------------------------------*/
+}
+
+@media screen and (max-width: 480px){
+	[class*="__container"]{
+		max-width: 400;
+		margin: 0 auto;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.head-block__title {
+		font-size: 32px;
+	}
+	.head-block__pictures-block {
+		max-width: 400px;
+	}
+	.head-block__2-img {
+		margin-left: 20px;
+	}
+	/*-------- mechanical-era ---------*/
+	.page_title-block {
+		margin-top: 60px;
+	}
+	.page_title {
+		font-size: 32px;
+	}
+	.page_sub-title {
+		font-size: 20px;
+		margin-top: 15px;
+	}
+	.mechanical-era_item,
+	.digital-era_item {
+		margin-top: 100px;
+	}
+	.mechanical-era__abacus {
+		margin-top: 60px;
+	}
+	.text-container {
+		padding: 0 40px;
+	}
+	.title-size {
+		font-size: 21px;
+	}
+	.text-size {
+		font-size: 17px;
+		font-weight: 300;
+	}
+	/*---------------digital-era--------------*/
+	.digital-era__harvard-mark {
+		margin-top: 80px;
+	}
+}
+
+@media screen and (max-width: 425px){
+	[class*="__container"]{
+		max-width: 370;
+		margin: 0 auto;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+@media screen and (max-width: 376px){
+
+	.head-block {
+		margin-top: 90px;
+	}
+	.head-block__title {
+		font-size: 28px;
+	}
+	.head-block__sub-title {
+		font-size: 16px;
+		margin-top: 20px;
+		text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.6);
+	}
+	.head-block__pictures-block {
+		display: flex;
+		justify-content: none;
+		flex-direction: column;
+		max-width: 100%;
+		margin: 30px auto 0 auto;
+	}
+	
+	.head-block__img {
+		text-align: center;
+	}
+	.head-block__1-img img {
+		max-width: 52%;
+	}
+	.head-block__2-img img {
+		max-width: 60%;
+	}
+	.head-block__2-img {
+		margin-left: 0;
+		margin-top: 30px;
+	}
+
+	.text-container {
+		text-align: center;
+		margin-top: 15px;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		padding: 0 15px;
+	}
+	.title-size {
+		font-size: 22px;
+		font-weight: 500;
+		letter-spacing: 0.015em;
+	}
+	.text-size {
+		margin-top: 15px;
+		font-size: 16px;
+		letter-spacing: 0.02em;
+		line-height: 1.25em;
+	}
+}
+
+@media screen and (max-width: 320px){
+	.head-block__title {
+		font-size: 24px;
+	}
+	.head-block__sub-title {
+		line-height: 1.2em;
+		font-size: 14px;
+	}
+	.head-block__pictures-block {
+		margin: 20px auto 0 auto;
+	}
+}
+
+
+
+@media screen and (min-height: 900px){
+	.head-block__pictures-block {
+		display: flex;
+		justify-content: space-between;
+		max-width: 800px;
+		margin: 150px auto 0 auto;
+		padding-bottom: 50px;
+	}
+}
